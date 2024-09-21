@@ -1,0 +1,14 @@
+{
+    "name": "Мейсон - голосовой помощник",
+    "version": "1.5.8",
+    "description": "Время - самый ценный ресурс в мире, которые экономит Мейсон",
+    "manifest_version": 3,
+    "author": "Mk.Studio",
+    "action":{
+        "default_popup": "./templates/index.html",
+        "default_title": "Mayson"
+    },
+    "icons": {
+        "16": "heartlogo_old_icon.ico"
+    }
+}

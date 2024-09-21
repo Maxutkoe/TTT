@@ -1,0 +1,217 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Eel Example</title>
+    <style>
+    *{
+    margin: 0;
+    padding: 0;
+    background: #0d0c0d
+}
+
+a
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 180px;
+    height: 50px;
+    background: #232323;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 50px;
+    color: #FF0;
+    font-size: 20px;
+    font-family: verdana;
+    letter-spacing: 4px;
+/*    border-radius: 20px; */
+}
+
+a:before,
+a:after,
+span:before,
+span:after
+{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #FF0;
+    transition: 1s;
+    mix-blend-mode: hue;
+}
+
+a:before
+{
+    top: -2px;
+    left: -2px
+}
+a:after
+{
+    top: -2px;
+    right: -2px;
+}
+span:before
+{
+    bottom: -2px;
+    left: -2px
+}
+span:after
+{
+    bottom: -2px;
+    right: -2px
+}
+
+a:hover:before,
+a:hover:after,
+a:hover span:before,
+a:hover span:after
+{
+    width: calc( 180px/2 );
+    height: calc( 50px/2 )
+}
+
+
+      h1{
+        color: green;
+        text-align: center;
+      }
+      .random_number{
+        margin: 50px;
+        font-size: 150px;
+        text-align: center;
+      }
+      button{
+        display: block;
+        margin: 0 auto;
+      }
+
+
+/* CSS */
+.button-49,
+.button-49:after {
+  width: 250px;
+  height: 76px;
+  line-height: 78px;
+  font-size: 20px;
+  font-family: 'Play', sans-serif;
+  background: linear-gradient(45deg, transparent 5%, #ad139e 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  box-shadow: 12px 0px 0px #57245e;
+  outline: transparent;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-49:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  
+  content: 'ALTERNATE TEXT';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 100;
+  background: linear-gradient(45deg, transparent 3%, #2fc0e0 3%, #2fc0e0 5%, #2fc0e0 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+  clip-path: var(--slice-0);
+}
+
+.button-49:hover:after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .button-49,
+  .button-49:after {
+    width: 500px;
+    height: 100px;
+    line-height: 88px;
+
+    position: absolute;
+    right: 1000;
+    bottom: 100;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <h1>Mayson</h1>
+    <div class="random_number"></div>
+    <button>Get a Random number using Python</button>
+
+    <form action="/submit">
+      <input type="text" name="name" autocomplete="off">
+      <!--<a href="/"><span></span>TG</a>-->
+      <button class="button-49" role="button" type="submit" value="Submit">Подтвердить</button>
+
+    </form>
+  </body>
+</html>
